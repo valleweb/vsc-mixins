@@ -1,0 +1,31 @@
+{
+  "name": "vsc-mixins",
+  "description": "Awesome vsc mixins",
+  "version": "0.1.0",
+  "keywords": [
+    "polymer",
+    "web-components",
+    "mixins"
+  ],
+  "authors": [
+    "valleweb"
+  ],
+  "main": "vscButtonMixin.html",
+  "homepage": "https://github.com/valleweb/vsc-mixins",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/valleweb/vsc-mixins"
+  },
+  "license": "https://github.com/valleweb/vsc-mixins/blob/master/LICENSE.md",
+  "ignore": [
+    "**/.*",
+    "bower_components"
+  ],
+  "dependencies": {},
+  "devDependencies": {
+    "polymer": "Polymer/polymer#^2.0.0",
+    "webcomponentsjs": "webcomponents/webcomponentsjs#^1.0.0",
+    "web-component-tester": "Polymer/web-component-tester#^6.0.0",
+    "iron-test-helpers": "^2.0.0"
+  }
+}

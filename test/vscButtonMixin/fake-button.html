@@ -1,0 +1,18 @@
+<link rel="import" href="../../../polymer/polymer-element.html">
+<link rel="import" href="../../vscButtonMixin.html">
+
+<dom-module id="fake-button">
+  <template>
+
+    <slot></slot>
+
+  </template>
+
+  <script>
+    class fakeButton extends vscButtonMixin(Polymer.Element) {
+      static get is() { return 'fake-button'; }
+    }
+
+    window.customElements.define(fakeButton.is, fakeButton);
+  </script>
+</dom-module>
