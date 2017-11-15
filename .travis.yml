@@ -9,9 +9,8 @@ addons:
         - google-chrome-stable
 sudo: required
 before_script:
-- npm install -g bower polymer-cli eslint eslint-plugin-html web-component-tester
+- npm install -g bower eslint eslint-plugin-html web-component-tester
 - bower install
-- polymer lint
 - eslint *.html
 script:
 - xvfb-run wct
