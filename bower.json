@@ -1,7 +1,7 @@
 {
-  "name": "vsc-mixins",
-  "description": "Awesome vsc mixins",
-  "version": "0.1.0",
+  "name": "valle-mixinButton",
+  "description": "Awesome valle mixin button",
+  "version": "1.0.0",
   "keywords": [
     "polymer",
     "web-components",
@@ -10,13 +10,13 @@
   "authors": [
     "valleweb"
   ],
-  "main": "vscButtonMixin.html",
-  "homepage": "https://github.com/valleweb/vsc-mixins",
+  "main": "valle-mixinButton.html",
+  "homepage": "https://github.com/valleweb/valle-mixinButton",
   "repository": {
     "type": "git",
-    "url": "git://github.com/valleweb/vsc-mixins"
+    "url": "git://github.com/valleweb/valle-mixinButton"
   },
-  "license": "https://github.com/valleweb/vsc-mixins/blob/master/LICENSE.md",
+  "license": "https://github.com/valleweb/valle-mixinButton/blob/master/LICENSE.md",
   "ignore": [
     "**/.*",
     "bower_components"

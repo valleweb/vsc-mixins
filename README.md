@@ -1,8 +1,8 @@
-# vsc-mixins
+# valle-mixinButton
 
-> Awesome vsc mixins for Polymer 2 elements.
+> Awesome valle mixin button for Polymer 2 elements.
 
-[![Travis CI Status](https://travis-ci.org/valleweb/vsc-mixins.svg?branch=master)](https://travis-ci.org/valleweb/vsc-mixins)
+[![Travis CI Status](https://travis-ci.org/valleweb/valle-mixinButton.svg?branch=master)](https://travis-ci.org/valleweb/valle-mixinButton)
 
 ## What is?
 
@@ -14,10 +14,6 @@ or only...
 
 Allows to share behaviors (like methods and properties) between different elements.
 
-## Mixins available
-
-- [vscButtonMixin](#vscButtonMixin) - All behaviors of a normal button plus the characteristics of a toggle button.
-
 ## Basic usage
 
 ### How to install:
@@ -25,7 +21,7 @@ Allows to share behaviors (like methods and properties) between different elemen
 Install using [Bower](http://bower.io/):
 
 ```sh
-$ bower install vsc-mixins --save
+$ bower install valle-mixinButton --save
 ```
 
 ### How to use:
@@ -33,13 +29,13 @@ $ bower install vsc-mixins --save
 Import the mixins:
 
 ```html
-<link rel="import" href="bower_components/vsc-mixins/vscButtonMixins.html">
+<link rel="import" href="bower_components/valle-mixinButton/valle-mixinButton.html">
 ```
 
 Using it:
 
 ```js
-  class myButton extends vscButtonMixin(Polymer.Element) {
+  class myButton extends valleMixinButton(Polymer.Element) {
     static get is() { return 'my-button'; }
   }
 ```
@@ -48,7 +44,7 @@ Using it:
 
 ```html
 <link rel="import" href="bower_components/polymer/polymer-element.html">
-<link rel="import" href="bower_components/vsc-mixins/vscButtonMixins.html">
+<link rel="import" href="bower_components/valle-mixinButton/valle-mixinButton.html">
 
 <dom-module id="my-button">
 
@@ -57,7 +53,7 @@ Using it:
   </template>
 
   <script>
-    class myButton extends vscButtonMixin(Polymer.Element) {
+    class myButton extends valleMixinButton(Polymer.Element) {
       static get is() { return 'my-button'; }
     }
     window.customElements.define(myButton.is, myButton);
@@ -66,7 +62,7 @@ Using it:
 </dom-module>
 ```
 
-## vscButtonMixin
+## valle-mixinButton
 
 All behaviors of a normal button plus the characteristics of a toggle button.
 
@@ -84,7 +80,7 @@ Property    | Type      | Default | Description
 `toggle`    | *Boolean* | `false` | Allow toggle mode
 `pressed`   | *Boolean* | `false` | Set the pressed state (toggled)
 
-[View all methods, listeners, properties, etc...](vscButtonMixin.html)
+[View all methods, listeners, properties, etc...](valle-mixinButton.html)
 
 ## Tests
 
@@ -97,7 +93,7 @@ $ bower install
 2 - Install the Web Component Tester (WCT) test runner:
 
 ```sh
-$ [sudo] npm install -g web-component-tester
+$ [sudo] yarn global add web-component-tester
 ```
 
 3 - Run tests:
@@ -112,14 +108,14 @@ To keep better organization of releases we follow the [Semantic Versioning 2.0.0
 
 ## Contributing
 
-Find on our [issues](https://github.com/valleweb/vsc-mixins/issues/) the next steps of the project ;)
+Find on our [issues](https://github.com/valleweb/valle-mixinButton/issues/) the next steps of the project ;)
 <br>
-Want to contribute? [Follow these recommendations](https://github.com/valleweb/vsc-mixins/blob/master/CONTRIBUTING.md).
+Want to contribute? [Follow these recommendations](https://github.com/valleweb/valle-mixinButton/blob/master/CONTRIBUTING.md).
 
 ## History
 
-See [Releases](https://github.com/valleweb/vsc-mixins/releases) for detailed changelog.
+See [Releases](https://github.com/valleweb/valle-mixinButton/releases) for detailed changelog.
 
 ## License
 
-[MIT License](https://github.com/valleweb/vsc-mixins/blob/master/LICENSE.md) © [valleweb](https://github.com/orgs/valleweb/people)
+[MIT License](https://github.com/valleweb/valle-mixinButton/blob/master/LICENSE.md) © [valleweb](https://github.com/orgs/valleweb/people)

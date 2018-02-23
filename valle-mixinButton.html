@@ -1,7 +1,7 @@
 <script>
-  /* exported vscButtonMixin */
+  /* exported valle-mixinButton */
 
-  var vscButtonMixin = function(superClass) {
+  var valleMixinButton = function(superClass) {
     return class extends superClass {
 
       connectedCallback() {
@@ -16,12 +16,12 @@
         }
 
         // Toggle powers
-        if(this.toggle) {
+        if (this.toggle) {
           this.setAttribute('aria-pressed', 'false');
           this.addEventListener('click', this._handleToggle);
         }
 
-        // Keyboard conrols
+        // Keyboard controls
         this.addEventListener('keydown', this._handleKeyDown);
 
       }
@@ -39,7 +39,7 @@
 
       // Disabled observer
       _toggleDisable(newBooleanValue) {
-        if(newBooleanValue) {
+        if (newBooleanValue) {
 
           // Disabled button
           this.removeAttribute('tabindex');
@@ -65,7 +65,7 @@
 
       // Pressed observer
       _togglePress(newBooleanValue) {
-        if(this.toggle) {
+        if (this.toggle) {
           newBooleanValue
           ? this.setAttribute('aria-pressed', 'true')
           : this.setAttribute('aria-pressed', 'false')

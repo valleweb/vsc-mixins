@@ -1,5 +1,5 @@
 <link rel="import" href="../../../polymer/polymer-element.html">
-<link rel="import" href="../../vscButtonMixin.html">
+<link rel="import" href="../../valle-mixinButton.html">
 
 <dom-module id="fake-button">
   <template>
@@ -9,7 +9,7 @@
   </template>
 
   <script>
-    class fakeButton extends vscButtonMixin(Polymer.Element) {
+    class fakeButton extends valleMixinButton(Polymer.Element) {
       static get is() { return 'fake-button'; }
     }
 
