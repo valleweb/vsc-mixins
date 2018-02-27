@@ -1,6 +1,8 @@
 <script>
   /* exported valle-mixinButton */
-  /*eslint no-unused-vars: 0*/
+  /* eslint no-unused-vars: 0 */
+  /* eslint no-var: 0 */
+  /* eslint func-style: 0 */
 
   var valleMixinButton = function(superClass) {
     return class extends superClass {
@@ -29,8 +31,8 @@
 
       // Keydown handler
       _handleKeyDown(e) {
-        const pressSpace = e.which == 32 || e.keyCode == 32;
-        const pressEnter = e.which == 13 || e.keyCode == 13;
+        const pressSpace = e.which === 32 || e.keyCode === 32;
+        const pressEnter = e.which === 13 || e.keyCode === 13;
 
         if (pressSpace || pressEnter) {
           e.preventDefault();
@@ -45,14 +47,14 @@
           // Disabled button
           this.removeAttribute('tabindex');
           this.setAttribute('aria-disabled', true);
-          this.style.pointerEvents = "none";
+          this.style.pointerEvents = 'none';
 
         } else {
 
           // Default button
           this.setAttribute('tabindex', '0');
           this.removeAttribute('aria-disabled');
-          this.style.pointerEvents = "auto";
+          this.style.pointerEvents = 'auto';
 
         }
       }
@@ -60,16 +62,16 @@
       // Toggle handler
       _handleToggle() {
         this.hasAttribute('pressed')
-        ? this.removeAttribute('pressed')
-        : this.setAttribute('pressed', '')
+          ? this.removeAttribute('pressed')
+          : this.setAttribute('pressed', '');
       }
 
       // Pressed observer
       _togglePress(newBooleanValue) {
         if (this.toggle) {
           newBooleanValue
-          ? this.setAttribute('aria-pressed', 'true')
-          : this.setAttribute('aria-pressed', 'false')
+            ? this.setAttribute('aria-pressed', 'true')
+            : this.setAttribute('aria-pressed', 'false');
         }
       }
 
@@ -91,9 +93,9 @@
             observer: '_togglePress',
             reflectToAttribute: true
           }
-        }
+        };
       }
 
-    }
-  }
+    };
+  };
 </script>
