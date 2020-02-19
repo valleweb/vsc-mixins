@@ -1,14 +1,14 @@
 # valle-mixinButton
 
-> Awesome valle mixin button for Polymer 2 elements.
+> Awesome valle-mixinButton for Polymer 3 elements
 
-[![Travis CI Status](https://travis-ci.org/valleweb/valle-mixinButton.svg?branch=master)](https://travis-ci.org/valleweb/valle-mixinButton)
+[![npm](https://img.shields.io/npm/v/@valle/valle-mixinButton.svg)](https://www.npmjs.com/package/@valle/valle-mixinButton)
 
 ## What is?
 
 A class expression mixin is basically a function that operates as a class factory. You pass in a superclass, and the function generates a new class that extends the superclass with the mixin's methods.
 
-[See polymer mixins docs.](https://www.polymer-project.org/2.0/docs/devguide/custom-elements#mixins)
+[See polymer mixins docs.](https://www.polymer-project.org/3.0/docs/devguide/custom-elements#mixins)
 
 or only...
 
@@ -16,50 +16,50 @@ Allows to share behaviors (like methods and properties) between different elemen
 
 ## Basic usage
 
-### How to install:
+## How to install and use:
 
-Install using [Bower](http://bower.io/):
+1 - Install the element using [Yarn](http://yarn.io/):
 
 ```sh
-$ bower install valle-mixinButton --save
+$ yarn add @valle/valle-mixinButton
 ```
 
-### How to use:
-
-Import the mixins:
+2 -  Import the element:
 
 ```html
-<link rel="import" href="bower_components/valle-mixinButton/valle-mixinButton.html">
+<script type="module" src="node_modules/@valle/valle-mixinButton/valle-mixinButton.js"></script>
 ```
 
-Using it:
+or in your javascript file
 
 ```js
-  class myButton extends valleMixinButton(Polymer.Element) {
-    static get is() { return 'my-button'; }
-  }
+import { valleMixinButton } from '@valle/valle-mixinButton/valle-mixinButton.js';
+```
+
+3 - Start using it!
+
+```js
+class myButton extends valleMixinButton(PolymerElement) {
+};
 ```
 
 ### Full Example:
 
-```html
-<link rel="import" href="bower_components/polymer/polymer-element.html">
-<link rel="import" href="bower_components/valle-mixinButton/valle-mixinButton.html">
+```js
+import { valleMixinButton } from '../../valle-mixinButton.js';
+import { html, PolymerElement } from '@polymer/polymer/polymer-element.js';
 
-<dom-module id="my-button">
+class myButton extends valleMixinButton(PolymerElement) {
+  static get template() {
+    return html`
+      <template>
+        <slot></slot>
+      </template>
+    `
+  }
+};
 
-  <template>
-    My button
-  </template>
-
-  <script>
-    class myButton extends valleMixinButton(Polymer.Element) {
-      static get is() { return 'my-button'; }
-    }
-    window.customElements.define(myButton.is, myButton);
-  </script>
-
-</dom-module>
+window.customElements.define('my-button', myButton);
 ```
 
 ## valle-mixinButton
@@ -71,7 +71,6 @@ All behaviors of a normal button plus the characteristics of a toggle button.
 - Control `pointer-events` CSS state when necessary.
 - Add keyboard (`SPACE` and `ENTER`) power for dispatch actions.
 
-
 ### Properties provided
 
 Property    | Type      | Default | Description
@@ -80,26 +79,36 @@ Property    | Type      | Default | Description
 `toggle`    | *Boolean* | `false` | Allow toggle mode
 `pressed`   | *Boolean* | `false` | Set the pressed state (toggled)
 
-[View all methods, listeners, properties, etc...](valle-mixinButton.html)
+[View all methods, listeners, properties, etc...](valle-mixinButton.js)
 
-## Tests
+## Browser Support
 
-1 - Install local dependencies:
+Using the [webcomponents.js](https://github.com/WebComponents/webcomponentsjs):
+
+ ![Chrome](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.2.2/chrome/chrome_48x48.png) | ![Opera](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.2.2/opera/opera_48x48.png) | ![Firefox](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.2.2/firefox/firefox_48x48.png) | ![Safari](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.2.2/safari/safari_48x48.png) |![IE](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.2.2/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png) |  ![Edge](https://cdnjs.cloudflare.com/ajax/libs/browser-logos/39.2.2/edge/edge_48x48.png) |
+:---: | :---: | :---: | :---: | :---: | :---: |
+Latest ✔ | Latest ✔ | Latest ✔ | Latest ✔ | 11+ | Latest ✔
+
+## Development
+
+1 - Verify if you have [node](http://nodejs.org/) and [yarn](http://yarn.io/) installed.
+
+2 - Install [Polymer-CLI](https://www.polymer-project.org/3.0/docs/tools/polymer-cli):
 
 ```sh
-$ bower install
+$ [sudo] yarn global add polymer-cli
 ```
 
-2 - Install the Web Component Tester (WCT) test runner:
+3 - Install local dependencies:
 
 ```sh
-$ [sudo] yarn global add web-component-tester
+$ yarn
 ```
 
-3 - Run tests:
+4 - Start the development server:
 
 ```sh
-$ wct
+$ yarn start
 ```
 
 ## Versioning
